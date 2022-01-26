@@ -1,6 +1,7 @@
 package com.example.shoppingapi.domain
 
 import com.example.shoppingapi.config.logger
+import com.example.shoppingapi.domain.document.Item
 import com.example.shoppingapi.domain.repository.ItemRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Component

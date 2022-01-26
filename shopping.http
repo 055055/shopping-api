@@ -1,0 +1,7 @@
+POST http://localhost:8080/item
+Content-Type: application/json
+
+{
+  "name": "wow 효자손",
+  "price": 4500.0
+}
