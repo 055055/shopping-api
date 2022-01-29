@@ -8,5 +8,5 @@ data class Item(
     @Id
     val id: String? = null,
     val name: String,
-    val price: Double,
+    val price: Int,
 )

@@ -12,5 +12,10 @@ class ItemService(
 ) {
 
     fun save(itemSaveReqDto: ItemSaveReqDto): Mono<Item> =
-        itemRepository.save(Item(name = itemSaveReqDto.name, price = itemSaveReqDto.price))
+        itemRepository.save(
+            Item(
+                name = itemSaveReqDto.name,
+                price = itemSaveReqDto.price
+            )
+        )
 }

@@ -14,7 +14,7 @@ class Test501(
     @Bean
     fun test() {
         val save = itemRepository.save(
-            Item(null, "dd", 12.5)
+            Item(null, "dd", 12)
         )
         save.subscribe {
             logger.info { it }
