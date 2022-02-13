@@ -15,7 +15,11 @@ class ItemService(
         itemRepository.save(
             Item(
                 name = itemSaveReqDto.name,
-                price = itemSaveReqDto.price
+                price = itemSaveReqDto.price,
             )
         )
+
+    fun findItemById(id: String): Mono<Item> =
+        itemRepository.findById(id)
+
 }

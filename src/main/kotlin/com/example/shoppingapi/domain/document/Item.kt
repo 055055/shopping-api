@@ -6,7 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class Item(
     @Id
-    val id: String? = null,
+    val seq: String? = null,
     val name: String,
-    val price: Int,
+    val price: Double,
+    val isSell: Boolean = true,
 )

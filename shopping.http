@@ -1,8 +1,12 @@
+GET http://localhost:8080/item/61f75400232cee1d6233874f
+Accept: application/json
+
+###
 
 POST http://localhost:8080/item
 Content-Type: application/json
 
 {
-  "name": "wow 효자손",
-  "price": 4500.0
+  "name": "[스트로베리]니베아 립밤",
+  "price": 2200
 }

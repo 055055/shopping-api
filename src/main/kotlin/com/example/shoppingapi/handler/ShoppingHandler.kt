@@ -25,8 +25,16 @@ class ShoppingHandler(
         }
     }
 
+    fun getItemById(serverRequest: ServerRequest): Mono<ServerResponse> {
+
+       return ServerResponse.status(HttpStatus.OK)
+           .contentType(MediaType.APPLICATION_JSON)
+           .body(itemService.findItemById(serverRequest.pathVariable("itemId")), Item::class.java)
+    }
+
     fun getRouteRule(): RouterFunction<ServerResponse> {
         return RouterFunctions
             .route(RequestPredicates.POST("/item"), this::saveItem)
+            .andRoute(RequestPredicates.GET("/item/{itemId}"), this::getItemById)
     }
 }
