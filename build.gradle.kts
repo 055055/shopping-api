@@ -11,6 +11,15 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
+object Version{
+    object Test{
+        const val KOTEST = "5.1.0"
+        const val MOCKK = "1.12.2"
+        const val NINJA_SQUAD = "3.1.0"
+    }
+}
+
+
 repositories {
     mavenCentral()
 }
@@ -27,6 +36,11 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+
+    testImplementation ("io.kotest:kotest-assertions-core-jvm:${Version.Test.KOTEST}")
+    testImplementation ("io.kotest:kotest-runner-junit5-jvm:${Version.Test.KOTEST}")
+    testImplementation ("io.mockk:mockk:${Version.Test.MOCKK}")
+    testImplementation ("com.ninja-squad:springmockk:${Version.Test.NINJA_SQUAD}")
 }
 
 tasks.withType<KotlinCompile> {

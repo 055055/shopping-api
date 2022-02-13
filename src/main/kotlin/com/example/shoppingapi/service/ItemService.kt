@@ -21,5 +21,4 @@ class ItemService(
 
     fun findItemById(id: String): Mono<Item> =
         itemRepository.findById(id)
-
 }
