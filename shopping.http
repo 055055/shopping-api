@@ -10,3 +10,7 @@ Content-Type: application/json
   "name": "[스트로베리]니베아 립밤",
   "price": 2200
 }
+
+###
+POST http://localhost:8080/621a4cfe1477fd23d65a3352/61f75400232cee1d6233874f
+Content-Type: application/json

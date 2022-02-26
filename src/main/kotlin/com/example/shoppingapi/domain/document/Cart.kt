@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class Cart(
     @Id
-    var id: String?,
-    val cartItems: List<CartItem> = listOf()
+    val id: String? = null,
+    val cartItems: MutableList<CartItem> = mutableListOf()
 )
